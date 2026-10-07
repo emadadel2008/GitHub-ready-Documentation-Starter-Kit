@@ -14,6 +14,7 @@ Documentation should be reviewed against the actual system.
 - [ ] Configuration is current
 - [ ] Security controls are verified
 - [ ] Diagrams are current, legible, and suited to their audience
+- [ ] Architecturally significant quality requirements have measurable scenarios or explicit owners for unresolved targets
 
 ### Operations
 
@@ -23,6 +24,8 @@ Documentation should be reviewed against the actual system.
 - [ ] Restore tested
 - [ ] Troubleshooting documented
 - [ ] DR documented
+- [ ] Significant incidents have a learning review and owned follow-up actions
+- [ ] Cross-cutting technical risks have owners, responses, and review dates
 
 ### Ownership and maintenance
 

@@ -59,11 +59,36 @@ One diagram rarely serves every audience. Prefer a small set of clear, linked vi
 
 Use [`../templates/architecture-diagrams.md`](../templates/architecture-diagrams.md) for Mermaid starters. Treat examples as scaffolding only; replace them with verified project details.
 
+### Diagrams as code
+
+Text-based diagrams can be reviewed with code, versioned, and rendered in automated checks. Keep the editable source as the canonical artifact and make the renderer and generated-output policy explicit. Mermaid is a lightweight starting point; teams with more complex C4 models may evaluate [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML) or [Structurizr](https://github.com/structurizr/structurizr) as optional alternatives. These tools have different syntax and rendering requirements, so do not adopt them unless their additional capabilities justify the setup and maintenance.
+
+Regardless of notation, define the system boundary, audience, scope, and notation consistently, and validate the rendered result. A diagram-as-code source can still be wrong or stale if updates are not part of the change workflow.
+
 ## Decision Log vs. ADR
 
 A **decision log** is an index: it makes decisions easy to find and gives a short summary. An **Architecture Decision Record (ADR)** captures the context and reasoning for one consequential decision, including alternatives and trade-offs. Use a log entry alone for a small, easily reversible choice; link to an ADR when future contributors need the deeper rationale.
 
 Record decisions while the context is still available. If a decision changes, preserve the previous ADR and create a new record that supersedes it rather than erasing history.
+
+Use the full [ADR template](../templates/architecture-decision-record.md) when context, alternatives, trade-offs, or follow-up need to be preserved. For a small and low-risk decision, the [lightweight ADR template](../templates/architecture-decision-record-lightweight.md) may be sufficient. Teams should agree on a threshold for when a decision warrants a full record. Optional tooling can automate numbering and superseding links; see [Documentation Lifecycle](18-DOCUMENTATION-LIFECYCLE.md#optional-automation).
+
+## Technical Risk Register
+
+Risks and unknowns appear in individual requirements and designs, but significant cross-cutting risks are easier to manage in one owned register. Use [`../templates/risk-register.md`](../templates/risk-register.md) to capture the cause, uncertain event, potential impact, response, owner, and review date. Keep design-specific questions in the relevant document and link high-impact items to the register rather than duplicating their status.
+
+## Organize for Reader Intent
+
+The numbered files in this kit organize information by project topic. A complementary way to assess each page is to ask what the reader is trying to do:
+
+| Content type | Reader need | Example |
+|---|---|---|
+| Tutorial | Learn by completing a guided exercise | A first deployment walkthrough |
+| How-to guide | Complete a specific task | Rotate a credential using the approved process |
+| Reference | Look up exact facts or options | API schema, configuration keys, component catalog |
+| Explanation | Understand concepts, context, or rationale | Why a design uses asynchronous processing |
+
+These categories are a reader-intent lens, not a mandatory folder layout. A project may keep its architecture and operations sections while labeling or linking content by intended use. Do not force one page to serve all purposes; link a conceptual explanation to the task procedure or authoritative reference instead. See the [Diátaxis framework](https://diataxis.fr/) for the underlying model.
 
 ## Artifact Repository
 

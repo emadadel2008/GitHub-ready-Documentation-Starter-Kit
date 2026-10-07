@@ -50,6 +50,16 @@ If ownership, cadence, or currency is not yet known, record it as Unknown and as
 5. **Record history and ownership** in version control, decision records, or the project index.
 6. **Schedule follow-up** for unresolved unknowns and routine reviews.
 
+## Optional Automation
+
+Automation can help enforce the process, but it does not replace clear ownership or review:
+
+- Use an ADR helper such as [adr-tools](https://github.com/npryce/adr-tools) if numbering, linking, and superseding records manually is error-prone for your team.
+- Consider a CI check that flags changes to architecture-sensitive paths when no related ADR or documentation update is linked. Start with a visible warning and a clearly scoped path list; only make it blocking when the rule is reliable and exceptions are documented.
+- Render and validate diagrams in CI when the repository has diagrams-as-code and a suitable renderer. Keep the source and generated-artifact policy explicit.
+
+Choose automation proportionate to the team's tools and change volume. A lightweight manual checklist is preferable to a brittle gate.
+
 ## Change Record
 
 For a significant documentation or architecture update, capture:

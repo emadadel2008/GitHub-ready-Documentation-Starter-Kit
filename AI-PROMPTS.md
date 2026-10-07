@@ -84,3 +84,21 @@ Include:
 
 Never invent commands. Mark unavailable information as Unknown.
 ```
+
+## 6. Draft an Incident Postmortem
+
+```text
+Using only the provided incident evidence, draft a blameless incident postmortem.
+
+Include:
+- customer and business impact, with evidence and known uncertainty
+- a timestamped timeline with timezone and source for each event
+- trigger, root cause if established, and contributing system/process conditions
+- detection and response assessment, including what helped and hindered recovery
+- corrective and preventive actions, each with an owner, due date, and measurable completion criteria
+
+Do not infer causality from sequence alone or assign blame to individuals.
+Separate confirmed facts from hypotheses and unknowns.
+Do not invent impact, timestamps, root cause, or action owners.
+Mark unverified details Unknown and list how they can be validated.
+```

@@ -67,6 +67,14 @@
 |---|---|---|---|---|
 | REQ-NF-001 | `<availability, performance, security, privacy, accessibility, etc.>` | `<quantified target or Unknown>` | `<test, evidence, or owner>` | `<Confirmed / Assumption / Unknown>` |
 
+For architecturally significant quality requirements, make the expectation measurable with a scenario:
+
+| ID | Stimulus / source | Environment | Expected response | Measure / acceptance threshold | Verification |
+|---|---|---|---|---|---|
+| REQ-QA-001 | `<event and initiating actor>` | `<operating conditions or load>` | `<observable system behavior>` | `<measurable threshold>` | `<test, analysis, or evidence>` |
+
+Example structure: "When `<stimulus>` occurs in `<environment>`, the system shall `<response>` within `<measure/threshold>`." Replace all placeholders with stakeholder-approved requirements; do not treat the example format as a target.
+
 ### Business rules
 
 | ID | Rule | Source / authority | Open questions |
