@@ -1,5 +1,10 @@
 # Project Documentation Starter Kit
 
+> [!IMPORTANT]
+> **ابدأ من هنا | Start here**
+>
+> أول مرة تبدأ في توثيق مشروع؟ ابدأ بقراءة [الدليل التعريفي العربي: أهمية التوثيق وكيف تبدأ](docs/documentation-getting-started-ar.pdf). يشرح الدليل الفكرة وخطوات البداية لمشاريع Cloud وDevOps، وبعده انتقل إلى [خطوات البدء والقوالب](#start-in-five-steps).
+
 **A practical reference and copy-ready template library for documenting software systems, cloud platforms, infrastructure, and architecture decisions.**
 
 This repository helps teams create documentation that is useful after launch—not just at handoff. It brings together a discovery-first workflow, architecture guidance, operational references, and reusable templates so people can understand, change, deploy, troubleshoot, and maintain a system even when its original contributors are unavailable.
