@@ -11,8 +11,9 @@ This repository helps teams create documentation that is useful after launch—n
 - Discover and describe an unfamiliar project without presenting guesses as facts.
 - Connect business requirements to high-level and low-level designs, implementation, and tests.
 - Choose architecture diagrams for their audience and purpose.
+- Specify measurable quality scenarios and maintain a prioritized technical risk register.
 - Record why important decisions were made—not only what was selected.
-- Document deployment, security, operations, troubleshooting, backup, and recovery.
+- Document deployment, security, operations, incident learning, troubleshooting, backup, and recovery.
 - Establish clear documentation ownership, review cadence, and change history.
 - Use AI to draft or review documentation while requiring evidence and explicit unknowns.
 
@@ -64,6 +65,8 @@ Documentation is a continuing engineering activity. Update relevant artifacts al
 | [`docs/17-DOCUMENTATION-REVIEW.md`](docs/17-DOCUMENTATION-REVIEW.md) | Accuracy, operational readiness, ownership, and quality checklist. |
 | [`docs/18-DOCUMENTATION-LIFECYCLE.md`](docs/18-DOCUMENTATION-LIFECYCLE.md) | Source of truth, ownership, review cadence, and change workflow. |
 | [`docs/19-ARCHITECTURE-ARTIFACTS.md`](docs/19-ARCHITECTURE-ARTIFACTS.md) | BRD, HLD, LLD, ADRs, decision logs, diagrams, and artifact repositories. |
+| [`docs/20-INCIDENT-LEARNING.md`](docs/20-INCIDENT-LEARNING.md) | Blameless post-incident learning, evidence, follow-up actions, and review process. |
+| [`docs/21-RESEARCH-REFERENCES.md`](docs/21-RESEARCH-REFERENCES.md) | Public repositories and frameworks reviewed, with the practices applied in this kit. |
 
 These files are **reference examples and guidance**, not claims about your project. Verify and adapt them before using them as project documentation.
 
@@ -75,12 +78,15 @@ The files in [`templates/`](templates/README.md) are reusable starting points. C
 |---|---|
 | [`project-documentation-index.md`](templates/project-documentation-index.md) | A landing page for project artifacts, audiences, owners, status, and review dates. |
 | [`business-requirements.md`](templates/business-requirements.md) | Business context, scope, measurable outcomes, functional and non-functional requirements, and traceability. |
-| [`high-level-design.md`](templates/high-level-design.md) | System boundaries, major components, integrations, quality attributes, and key trade-offs. |
+| [`high-level-design.md`](templates/high-level-design.md) | System boundaries, major components, integrations, measurable quality scenarios, and key trade-offs. |
 | [`low-level-design.md`](templates/low-level-design.md) | Component responsibilities, contracts, data models, interaction flows, errors, and testing. |
 | [`architecture-decision-record.md`](templates/architecture-decision-record.md) | Context, options, rationale, consequences, and follow-up for one significant decision. |
+| [`architecture-decision-record-lightweight.md`](templates/architecture-decision-record-lightweight.md) | A concise record for a small, low-risk decision. |
 | [`decision-log.md`](templates/decision-log.md) | A searchable index of decisions linked to their ADRs or evidence. |
 | [`architecture-diagrams.md`](templates/architecture-diagrams.md) | Mermaid starters for context, components, network, data flow, sequence, security, integration, and disaster recovery views. |
+| [`risk-register.md`](templates/risk-register.md) | Cross-cutting risk statements, likelihood and impact, mitigation, ownership, and review. |
 | [`operational-runbook.md`](templates/operational-runbook.md) | Verified diagnosis, operational procedures, recovery, validation, and escalation. |
+| [`postmortem.md`](templates/postmortem.md) | Blameless incident impact, evidence-based timeline, contributing conditions, and owned actions. |
 
 See [`templates/README.md`](templates/README.md) for the suggested order, selection guidance, and publishing checklist.
 
@@ -133,6 +139,12 @@ Diagrams provide focused views for specific audiences and questions.
 - **Decision log:** an index that makes decisions easy to find.
 - **Diagram:** a focused visual with a stated purpose, scope, and intended audience.
 
+Complement this topic-based structure with a reader-intent check: is each page a **tutorial**, **how-to guide**, **reference**, or **explanation**? See the [Architecture Artifacts guide](docs/19-ARCHITECTURE-ARTIFACTS.md#organize-for-reader-intent).
+
+## Research-Informed, Tool-Agnostic
+
+This kit was compared with public architecture, ADR, incident-response, and documentation-framework projects. Useful practices were adapted as optional patterns: quality-attribute scenarios, a separate technical risk register, blameless postmortems, lightweight ADRs, and reader-intent classification. Mermaid remains a simple starting point; C4-PlantUML and Structurizr are optional when a team needs richer diagrams-as-code workflows. See [Research References](docs/21-RESEARCH-REFERENCES.md) for the sources and how they informed this kit.
+
 ## Using AI Responsibly
 
 Use the prompts in [`AI-PROMPTS.md`](AI-PROMPTS.md) to accelerate discovery, drafting, and review—not to replace verification or ownership. Require the AI to:
@@ -142,6 +154,7 @@ Use the prompts in [`AI-PROMPTS.md`](AI-PROMPTS.md) to accelerate discovery, dra
 - Cite a file, configuration, command, or authoritative source for findings.
 - List validation actions for unresolved questions.
 - Avoid inventing endpoints, deployment steps, security controls, or operational commands.
+- Keep incident postmortems blameless and separate confirmed evidence from hypotheses.
 
 Review generated content against the actual system before publishing it.
 

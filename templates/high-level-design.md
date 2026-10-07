@@ -70,6 +70,16 @@ flowchart LR
 |---|---|---|---|---|
 | `<REQ-ID>` | `<performance, availability, security, etc.>` | `<target or Unknown>` | `<design response>` | `<test or evidence>` |
 
+### Quality attribute scenarios
+
+For each architecturally significant requirement, define the stimulus, context, observable response, and measurable success threshold. Link the scenario to its originating requirement and verification evidence.
+
+| Scenario ID | Quality attribute | Stimulus / source | Environment | Expected response | Measure / threshold | Requirement / verification |
+|---|---|---|---|---|---|---|
+| `<QA-001>` | `<availability, latency, security, modifiability, etc.>` | `<event and actor>` | `<load, failure, or operating conditions>` | `<observable system behavior>` | `<target or Unknown>` | `<REQ-ID / test / evidence>` |
+
+If the threshold is not agreed or verified, record it as Unknown and assign an owner to resolve it; do not invent targets.
+
 ## Data and Integrations
 
 | Data / integration | Source → destination | Protocol / format | Sensitivity / classification | Evidence |

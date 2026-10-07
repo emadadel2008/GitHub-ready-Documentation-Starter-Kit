@@ -6,6 +6,8 @@ Use:
 
 **Observe → Reproduce → Isolate → Verify → Fix → Validate → Document**
 
+Troubleshooting supports diagnosis and recovery while an issue is active. After a significant incident, capture organizational learning and follow-up actions separately using the [Incident Learning guide](20-INCIDENT-LEARNING.md) and [postmortem template](../templates/postmortem.md).
+
 ## Example: API Returns 500
 
 ### 1. Observe
