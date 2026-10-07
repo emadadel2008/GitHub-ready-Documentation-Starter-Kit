@@ -8,10 +8,12 @@ Documentation should be reviewed against the actual system.
 
 - [ ] Architecture matches implementation
 - [ ] Component list is complete
+- [ ] Requirements, designs, and decisions link to one another
 - [ ] APIs match actual endpoints
 - [ ] Deployment steps are current
 - [ ] Configuration is current
 - [ ] Security controls are verified
+- [ ] Diagrams are current, legible, and suited to their audience
 
 ### Operations
 
@@ -21,6 +23,14 @@ Documentation should be reviewed against the actual system.
 - [ ] Restore tested
 - [ ] Troubleshooting documented
 - [ ] DR documented
+
+### Ownership and maintenance
+
+- [ ] Each maintained artifact has a named owner or owning team
+- [ ] The canonical location is clear and accessible to its audience
+- [ ] Review cadence or next review date is recorded
+- [ ] Changes are version-controlled so prior decisions and states can be traced
+- [ ] Relevant documentation was updated with the associated code, infrastructure, or process change
 
 ### AI Review Prompt
 
@@ -47,3 +57,4 @@ A documentation set is ready when another engineer can:
 - Understand its dependencies.
 - Understand its security model.
 - Recover it after a failure.
+- Find who owns each artifact and where the source of truth lives.
